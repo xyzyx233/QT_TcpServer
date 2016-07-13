@@ -18,9 +18,9 @@ private:
 public:
     Tcp(QObject *parent = 0,int port=0);
     QList<TcpClientSocket*> tcpClientSocketList;
-    void sendtoa(QString);
     static void setpath(QString);
-    void updateClients(QString,int);
+//    void sendtoa(QString);
+//    void updateClients(QString,int);
 public slots:
     void slotDisconnected(int);
 protected:

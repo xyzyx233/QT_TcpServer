@@ -8,10 +8,10 @@ TcpClientSocket::TcpClientSocket(QObject *parent,int port)
     isfirst=port;
 }
 
-void TcpClientSocket::dataReceived(QString msg)
-{
-//        emit updateClients(msg,msg.length());
-}
+//void TcpClientSocket::dataReceived(QString msg)
+//{
+////        emit updateClients(msg,msg.length());
+//}
 void TcpClientSocket::dataReceived(){
     QString name=this->readAll();
     if(isfirst==6666){
@@ -58,9 +58,9 @@ void TcpClientSocket::slotDisconnected()
     qDebug()<< "tcpclient类发送信号 " <<this->socketDescriptor() ;
 }
 
-void TcpClientSocket::sendtoal(QString a){
-    emit sendtoall(a);
-}
+//void TcpClientSocket::sendtoal(QString a){
+//    emit sendtoall(a);
+//}
 void TcpClientSocket::setwherequestion(QString a){
     q.wherequestion(a);
 }

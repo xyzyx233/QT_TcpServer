@@ -14,7 +14,7 @@ bool queuemanagment::Iscontent(QString a,int b){
 }
 void queuemanagment::readstudentlist(QStringList path){
     for(int i=0;i<3;i++){
-        QString tmp=op.readfile(path[i],0);
+        QString tmp=op.readfile(path[i]);
         QStringList contentlist=tmp.split("\n");
         for(int j=0;j<contentlist.length();j++){
             grp[i]<< contentlist[j].split("|")[0];
@@ -80,7 +80,7 @@ QString queuemanagment::avaqueue(int a){
 }
 
 void queuemanagment::wherequestion(QString a){
-    questioncontent=op.readfile(a,1);
+    questioncontent=op.readfile(a);
     QStringList tmp1=questioncontent.split("\n");
     stream= new char(tmp1.length()+1);
     stream[1]=' ';

@@ -32,15 +32,15 @@ void Tcp::slotDisconnected(int descriptor)
         }
     }
 }
-void Tcp::updateClients(QString msg,int length)
-{
-    int x=length;
-    for(int i=0;i<tcpClientSocketList.count();i++)
-    {
-        QTcpSocket *item = tcpClientSocketList.at(i);
-        item->write(msg.toUtf8());
-    }
-}
+//void Tcp::updateClients(QString msg,int length)
+//{
+//    int x=length;
+//    for(int i=0;i<tcpClientSocketList.count();i++)
+//    {
+//        QTcpSocket *item = tcpClientSocketList.at(i);
+//        item->write(msg.toUtf8());
+//    }
+//}
 
 void Tcp::setpath(QString a){
     Tcp::path=a;

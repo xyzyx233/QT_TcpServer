@@ -4,7 +4,7 @@ fileop::fileop(QObject *parent) : QObject(parent)
 {
 
 }
-QString fileop::readfile(QString filepath,int mode){
+QString fileop::readfile(QString filepath){
     file=new QFile(filepath);
     if(!file->open(QFile::ReadOnly|QFile::Text)){
         qDebug()<< "读取失败\n";
@@ -17,7 +17,6 @@ QString fileop::readfile(QString filepath,int mode){
     for(int i=0;i<contentlist.length();i++){
         result<< contentlist[i].split("|")[0];
     }
-    emit readcontent(result,mode);
     file->close();
     return tmp;
 }

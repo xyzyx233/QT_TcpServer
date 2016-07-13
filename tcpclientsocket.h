@@ -13,12 +13,12 @@ public:
     void sendtoal(QString);
     void setwherequestion(QString);
 signals:
-    void updateClients(QString,int);
+//    void updateClients(QString,int);
     void disconnected(int);
-    void sendtoall(QString);
+//    void sendtoall(QString);
 protected slots:
     void dataReceived();
-    void dataReceived(QString);
+//    void dataReceived(QString);
     void slotDisconnected();
 private:
     queuemanagment q;

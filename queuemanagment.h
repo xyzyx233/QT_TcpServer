@@ -29,7 +29,7 @@ public:
     bool selectquestion(QString,int,int);   //选题操作，返回值为真则成功，参数为人员信息、班级号，题号
     QString avaqueue(int); //返回可选题序列
     void wherequestion(QString);    //打开题目文件
-    QString getquestioncontent();
+    QString getquestioncontent();   //获取题目内容
 //signals:
 //    void waitwmpty();
 };
